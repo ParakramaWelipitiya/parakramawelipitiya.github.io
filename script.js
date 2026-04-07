@@ -1,7 +1,6 @@
 const canvas = document.getElementById("networkCanvas");
 const ctx = canvas.getContext("2d");
 
-//resize canvas
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -9,7 +8,6 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-//mouse
 const mouse = {
   x: null,
   y: null,
@@ -21,7 +19,6 @@ window.addEventListener("mousemove", (e) => {
   mouse.y = e.y;
 });
 
-//particles
 const particles = [];
 const particleCount = 65;
 
@@ -63,12 +60,10 @@ class Particle {
   }
 }
 
-//init particles
 for (let i = 0; i < particleCount; i++) {
   particles.push(new Particle());
 }
 
-//connect lines
 function connectParticles() {
   for (let a = 0; a < particles.length; a++) {
     for (let b = a; b < particles.length; b++) {
@@ -92,7 +87,6 @@ function connectParticles() {
   }
 }
 
-//connect to mouse
 function connectMouse() {
   if (!mouse.x || !mouse.y) return;
 
@@ -114,7 +108,6 @@ function connectMouse() {
   });
 }
 
-//animation loop
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

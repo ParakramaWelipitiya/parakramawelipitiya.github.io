@@ -283,3 +283,54 @@ body {
     padding-top: 140px;
   }
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  background: #fff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 8px;
+  padding: 10px;
+  max-width: 280px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .gallery {
+    max-width: 100%;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+}
