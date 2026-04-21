@@ -334,3 +334,23 @@ body {
   border-top: 1px solid #eee;
   margin-top: 40px;
 }
+
+.card-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.card-actions a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
+
+.card-actions a:hover {
+  background: #111;
+  color: #fff;
+}
