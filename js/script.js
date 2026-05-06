@@ -34,11 +34,9 @@ class Particle {
     this.x += this.vx;
     this.y += this.vy;
 
-    // bounce
     if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
     if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
 
-    // subtle mouse repel
     if (mouse.x && mouse.y) {
       let dx = this.x - mouse.x;
       let dy = this.y - mouse.y;

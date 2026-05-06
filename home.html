@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parakrama Welipitiya</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Parakrama Welipitiya | Software Engineer</title>
+  <link rel="icon" type="image/png" href="images/favicon.png?v=2">
+  
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/certifications.css">
 </head>
 <body>
 
@@ -12,180 +16,282 @@
 
 <nav class="navbar">
   <div class="logo">Parakrama</div>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+  
+  <div class="hamburger" id="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul id="nav-menu">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#certifications" class="nav-link">Certificates</a></li>
+    <li><a href="https://parakramawelipitiya.blogspot.com/" target="_blank" class="nav-link">Blog</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="section hero">
   <div class="profile-container">
-    <img src="images/profileimage.jpg" class="profile-img">
+    <img src="images/profileimage.jpg" class="profile-img" alt="Parakrama Welipitiya">
   </div>
-
   <h1>Hi, I'm Parakrama</h1>
   <h3>Building Scalable Software Systems</h3>
   <p>I design and develop high-performance applications focused on real-world impact.</p>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-
-  <div class="about-grid">
-    <div class="about-card">
-      <h3>About</h3>
-      <p>I bridge the gap between complex backend logic and seamless user experiences. As a Software Engineering student, I focus on building production-ready systems that emphasize performance, scalability, and clean code principles.</p>
-    </div>
-
-    <div class="about-card">
-      <h3>Skills</h3>
-      <p>• Flutter <br>• JavaScript <br>• Node.js <br>• Firebase <br>• Python</p>
-    </div>
-
-    <div class="about-card">
-      <h3>Courses</h3>
-      <p>• Web Dev <br>• Mobile Dev <br>• System Design</p>
-    </div>
+  
+  <div class="hero-actions">
+    <a href="Docs/Parakrama_Welipitiya_CV.pdf" download class="btn-primary">Download CV</a>
+    <a href="#contact" class="btn-secondary">Let's Talk</a>
   </div>
 </section>
 
-<!-- PROJECTS -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>Who I Am</h3>
+      <p>I bridge the gap between complex backend logic and seamless user experiences. As a Software Engineering student, I focus on building production-ready systems that emphasize performance, scalability, and clean code principles.</p>
+    </div>
+    <div class="about-card">
+      <h3>Core Skills</h3>
+      <div class="skills-list">
+        <span>Flutter</span>
+        <span>JavaScript / TypeScript</span>
+        <span>Node.js</span>
+        <span>Firebase</span>
+        <span>Python</span>
+        <span>Android (Java/Kotlin)</span>
+      </div>
+    </div>
+
+    <div class="about-card github-card">
+      <h3>Live GitHub Activity</h3>
+      <img id="github-stats-img" 
+     src="https://github-readme-stats.vercel.app/api?username=ParakramaWelipitiya&show_icons=true&theme=transparent&hide_border=true&title_color=111111&text_color=555555&icon_color=000000"
+     onerror="this.onerror=null; this.src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';" 
+     alt="Parakrama's GitHub Stats">
+    </div>
+    
+  </div>
+</section>
+
 <section id="projects" class="section">
-  <h2>Projects</h2>
+  <h2>Featured Projects</h2>
+  
+  <div class="project-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="flutter">Flutter</button>
+    <button class="filter-btn" data-filter="android">Android</button>
+    <button class="filter-btn" data-filter="python">Python</button>
+    <button class="filter-btn" data-filter="website">Website</button>
+  </div>
 
   <div class="projects-grid">
 
-    <!-- CARD -->
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p1-1.jpg">
+    <div class="card" data-category="android">
+      <div class="card-img-wrapper">
+        <img src="images/trackerhouse.jpg" alt="Tracker House">
       </div>
       <div class="card-content">
-        <h3>Tracker House – Dealership Bike Sales App</h3>
-        <p class="tech">• Android Studio • Java • SQLite</p>
-        <p class="desc">A mobile app built with Android Studio for viewing and managing bikes.</p>
-        <a href="https://github.com/ParakramaWelipitiya/Tracker-House.git" target="_blank">GitHub</a>
-        <a href="https://github.com/ParakramaWelipitiya/Tracker-House/releases/download/v1.0/app.apk" target="_blank">Download APK</a>
+        <h3>Tracker House – Dealership App</h3>
+        <div class="tech-tags">
+          <span class="tag android">Android Studio</span>
+          <span class="tag java">Java</span>
+          <span class="tag db">SQLite</span>
+        </div>
+        <p class="desc">A mobile app built with Android Studio for viewing and managing bikes at a dealership.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/Tracker-House.git" target="_blank">GitHub</a>
+          <button class="card-actions-btn download-apk-btn" data-link="https://github.com/ParakramaWelipitiya/Tracker-House/releases/download/v1.0/Tracker.House_v1.0_release.apk" data-name="Tracker House App">Download APK</button>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p2-1.png">
+    <div class="card" data-category="python">
+      <div class="card-img-wrapper">
+        <img src="images/smartsizer.png" alt="SmartSizer">
       </div>
       <div class="card-content">
         <h3>SmartSizer – GUI Image Resizer</h3>
-        <p class="tech">• Python • Tkinter</p>
-        <p class="desc">Resize images with preview and batch processing.</p>
-        <a href="https://github.com/ParakramaWelipitiya/SmartSizer.git" target="_blank">GitHub</a>
+        <div class="tech-tags">
+          <span class="tag python">Python</span>
+          <span class="tag python">Tkinter</span>
+        </div>
+        <p class="desc">Desktop application to resize images with live previews and batch processing capabilities.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/SmartSizer.git" target="_blank">GitHub</a>
+          <button class="card-actions-btn download-apk-btn" data-link="https://github.com/ParakramaWelipitiya/SmartSizer/releases/download/v2.0.0/SmartSizer_Setup.exe" data-name="SmartSizer Setup">Download App</button>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p3-1.jpg">
+    <div class="card" data-category="flutter">
+      <div class="card-img-wrapper">
+        <img src="images/calqcalculator.jpg" alt="CalQ Android Calculator">
       </div>
       <div class="card-content">
         <h3>CalQ Android Calculator</h3>
-        <p class="tech">• Android • Java • SQLite</p>
-        <p class="desc">Multi-mode calculator with converters and advanced tools.</p>
-        <a href="https://github.com/ParakramaWelipitiya/CalQ-Android-Calculator.git" target="_blank">GitHub</a>
+        <div class="tech-tags">
+          <span class="tag android">Android Studio</span>
+          <span class="tag java">Java</span>
+        </div>
+        <p class="desc">CalQ is an all-in-one Android calculator built with Java in Android Studio.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/CalQ-Android-Calculator.git" target="_blank">GitHub</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p4-1.jpg">
+    <div class="card" data-category="flutter">
+      <div class="card-img-wrapper">
+        <img src="images/gemnest.jpg" alt="GemNest">
       </div>
       <div class="card-content">
         <h3>GemNest Mobile App</h3>
-        <p class="tech">• Flutter • Firebase</p>
-        <p class="desc">Marketplace for gemstone trading with secure transactions.</p>
-        <a href="https://github.com/EEY4189-HY2-GemNest/Gem-Nest-Mobile-App.git" target="_blank">GitHub</a>
+        <div class="tech-tags">
+          <span class="tag flutter">Flutter</span>
+          <span class="tag dart">Dart</span>
+          <span class="tag firebase">Firebase</span>
+        </div>
+        <p class="desc">Marketplace for gemstone trading with secure, real-time transactions.</p>
+        <div class="card-actions">
+          <a href="https://github.com/EEY4189-HY2-GemNest/Gem-Nest-Mobile-App.git" target="_blank">GitHub</a>
+          <!--<button class="card-actions-btn download-apk-btn" data-link="https://github.com/EEY4189-HY2-GemNest/Gem-Nest-Mobile-App/releases/download/v1.0/GemNest_v1.0_release.apk">Download APK</button> -->
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p5-1.jpg">
-      </div>
-      <div class="card-content">
-        <h3>Technician Service Mobile App</h3>
-        <p class="tech">• Flutter • Firebase</p>
-        <p class="desc">Marketplace for Technicians with secure transactions.</p>
-        <h3>Going on Project (Not Completed)</h3>
-        <a href="https://github.com/ParakramaWelipitiya/technician_service_app.git" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p6-1.jpg">
-      </div>
-      <div class="card-content">
-        <h3>color helper</h3>
-        <p class="tech">• TypeScript • JavaScript</p>
-        <p class="desc">color helper extension for VS code.</p>
-        <h3>Going on Project (Not Completed)</h3>
-        <a href="https://github.com/ParakramaWelipitiya/color-helper-extension.git" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p7-1.jpg">
-      </div>
-      <div class="card-content">
-        <h3>AMPW Studio</h3>
-        <p class="tech">• Flutter • Firebase</p>
-        <p class="desc">AMPW Image Editor is a Photo Editing App that have better features and User Experience.</p>
-        <h3>Going on Project (Not Completed)</h3>
-        <a href="https://github.com/ParakramaWelipitiya/AMPW_Image_Editor.git" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p8-1.jpg">
-      </div>
-      <div class="card-content">
-        <h3>AMPW Docs</h3>
-        <p class="tech">• Flutter • Dart</p>
-        <p class="desc">AMPW Docs is a sleek, high-performance document utility and PDF editor.</p>
-        <h3>Going on Project (Not Completed)</h3>
-        <a href="https://github.com/ParakramaWelipitiya/ampw-docs.git" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <!-- FIXED BROKEN CARD -->
-    <div class="card">
-      <div class="gallery">
-        <img src="images/p9-1.jpg">
+    <div class="card" data-category="flutter">
+      <div class="card-img-wrapper">
+        <img src="images/whatsAppstatussaver.png" alt="WhatsApp Status Saver">
       </div>
       <div class="card-content">
         <h3>WhatsApp Status Saver</h3>
-        <p class="tech">• Android Studio • Kotlin</p>
-        <p class="desc">WhatsApp Status Saver is an application that helps to save WhatsApp status easily.</p>
-        <a href="https://github.com/ParakramaWelipitiya/WhatsApp_Status_Saver.git" target="_blank">GitHub</a>
+        <div class="tech-tags">
+          <span class="tag kotlin">Kotlin</span>
+        </div>
+        <p class="desc">WhatsApp Status Saver is a high-performance, native Android utility designed for speed, elegance, and a premium user experience.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/WhatsApp_Status_Saver.git" target="_blank">GitHub</a>
+          <button class="card-actions-btn download-apk-btn" data-link="https://github.com/ParakramaWelipitiya/WhatsApp_Status_Saver/releases/download/v1.0/WA.Status.Saver.apk" data-name="WhatsApp Status Saver">Download APK</button>
+        </div>
       </div>
+    </div>
+
+    <div class="card" data-category="flutter">
+      <div class="card-img-wrapper">
+        <img src="images/color helper extension.png" alt="color helper extension for VS code">
+      </div>
+      <div class="card-content">
+        <div class="status-badge">In Progress</div>
+        <h3>color helper extension for VS code</h3>
+        <div class="tech-tags">
+          <span class="tag typescript">TypeScript</span>
+          <span class="tag javascript">JavaScript</span>
+        </div>
+        <p class="desc">A lightweight Visual Studio Code extension that detects and previews colors across all file types, with an integrated color picker for quick editing.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/color-helper-extension.git" target="_blank">GitHub</a>
+          <!-- <button class="card-actions-btn download-apk-btn" data-link="PASTE_YOUR_COPIED_LINK_HERE">Download APK</button> -->
+        </div>
+      </div> 
+    </div>
+
+    <div class="card" data-category="flutter">
+      <div class="card-img-wrapper">
+        <img src="images/ampwimageeditor.jpg" alt="AMPW Image Editor">
+      </div>
+      <div class="card-content">
+        <div class="status-badge">In Progress</div>
+        <h3>AMPW Image Editor</h3>
+        <div class="tech-tags">
+          <span class="tag flutter">Flutter</span>
+          <span class="tag dart">Dart</span>
+          <span class="tag firebase">Firebase</span>
+        </div>
+        <p class="desc">A high-performance photo editing application designed for a superior user experience.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/AMPW_Image_Editor.git" target="_blank">GitHub</a>
+          <!-- <button class="card-actions-btn download-apk-btn" data-link="PASTE_YOUR_COPIED_LINK_HERE">Download APK</button> -->
+        </div>
+      </div> 
+    </div>
+
+    <div class="card" data-category="flutter">
+      <div class="card-img-wrapper">
+        <img src="images/ampwdocs.jpg" alt="AMPW Docs">
+      </div>
+      <div class="card-content">
+        <div class="status-badge">In Progress</div>
+        <h3>AMPW Docs</h3>
+        <div class="tech-tags">
+          <span class="tag flutter">Flutter</span>
+          <span class="tag dart">Dart</span>
+        </div>
+        <p class="desc">It provides a comprehensive suite of tools to manipulate, convert, and manage documents seamlessly on mobile devices.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/ampw-docs.git" target="_blank">GitHub</a>
+          <!-- <button class="card-actions-btn download-apk-btn" data-link="PASTE_YOUR_COPIED_LINK_HERE">Download APK</button> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-category="flutter">
+      <div class="card-img-wrapper">
+        <img src="images/technicianserviceapp.jpg" alt="Technician Service App">
+      </div>
+      <div class="card-content"> 
+        <div class="status-badge">In Progress</div>
+        <h3>Technician Service App</h3>
+        <div class="tech-tags">
+          <span class="tag flutter">Flutter</span>
+          <span class="tag dart">Dart</span>
+          <span class="tag firebase">Firebase</span>
+        </div>
+        <p class="desc">On-demand technician service platform connecting customers with verified professionals for fast, reliable, and secure home services.</p>
+        <div class="card-actions">
+          <a href="https://github.com/ParakramaWelipitiya/technician_service_app.git" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="section">
+  <h2>Certifications & Courses</h2>
+  <div class="cert-grid">
+    
+    <div class="cert-card">
+      <div class="cert-icon">🎓</div>
+      <h3>Web Design for Beginners
+      <p class="cert-issuer">University of Moratuwa / DP Education</p>
+      <p class="cert-date">Completed: 2023/p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🎓</div>
+      <h3>Python for Beginners</h3>
+      <p class="cert-issuer">University of Moratuwa / DP Education</p>
+      <p class="cert-date">Completed: 2023</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">⚙️</div>
+      <h3>HTML, JavaScript, Java, Python, C, SQL</h3>
+      <p class="cert-issuer">Solo Learn</p>
+      <p class="cert-date">Completed: 2024</p>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Contact</h2>
-  <p>Let’s work together</p>
-
+  <p>Let’s build something great together.</p>
   <div class="contact-links">
-    <a href="mailto:parakramawelipitiya00@gmail.com?subject=Hello&body=Write your message here">Email</a>
-    <a href="https://github.com/ParakramaWelipitiya">GitHub</a>
-    <a href="https://www.linkedin.com/in/parakrama-welipitiya-8b8553344/">LinkedIn</a>
+    <a href="mailto:parakramawelipitiya00@gmail.com?subject=Hello&body=Write your message here">Email Me</a>
+    <a href="https://github.com/ParakramaWelipitiya" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/parakrama-welipitiya-8b8553344/" target="_blank">LinkedIn</a>
     <a href="tel:+94754357288">Phone</a>
   </div>
 </section>
@@ -194,8 +300,20 @@
   <p>© 2026 Parakrama Welipitiya</p>
 </footer>
 
-<script src="script.js"></script>
-<script src="home.js"></script>
+<div class="modal-overlay" id="downloadModal">
+  <div class="modal-box">
+    <h3 id="modalTitle">Download App</h3>
+    <p id="modalDesc">Do you want to download this file to your device now?</p>
+    <div class="modal-actions">
+      <button class="btn-secondary" id="cancelDownload">Cancel</button>
+      <button class="btn-primary" id="confirmDownload">Download Now</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/filters.js"></script> 
 
 </body>
 </html>
